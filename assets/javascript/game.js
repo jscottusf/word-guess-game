@@ -1,7 +1,9 @@
 //delcare variables
-var wordChoices = ["cat", "dog", "mouse"];
+var wordChoices = ["the cat", "the dog", "the mouse"];
+var alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var playerGuess;
-var wordBoard = "_ _ _ _ _";
+var lowerPlayerGuess;
+var wordBoard = "";
 var wordBoardText;
 var guessesLeft;
 var guesses = [];
@@ -26,25 +28,58 @@ console.log(word);
 //main game loop
 document.onkeyup = function(event) {
     playerGuess = event.key;
+    //convert to lower just to avoid any game glitches / hassel to player
+    lowerPlayerGuess = playerGuess.toLowerCase();
     console.log(playerGuess);
+    console.log(lowerPlayerGuess)
     winner.innerHTML = " ";
 
+    if (alphabet.indexOf(lowerPlayerGuess) === -1) {
+        alert("Please choose a lower case letter from a - z");
+    }
+    else if (guesses.indexOf(lowerPlayerGuess) != -1) {
+        alert("You have already chosen this letter")
+    }
+    else {
+        for (var j = 0; j < word.length; j++) {
+            if (word.charAt(j) === lowerPlayerGuess) {
+                wordBoard = setCharAt(wordBoard, j, lowerPlayerGuess);
+            }
+            
+        }
+        // if (wordChoices.indexOf(lowerPlayerGuess) === -1) {
+        //     guessesLeft--;
+        //     showGuesses();
+        // }
+
+            //     if (word.charAt(j) === lowerPlayerGuess) {
+            //         wordBoard = wordBoard + lowerPlayerGuess;
+            //         }
+            //     else {
+            //         wordBoard = wordBoard + "_ ";
+            //         }
+            // }
+    }
+
+
+
     //check that key is a lower case letter
-    
-
-    
-    
-
     setScore();
     
         
     
 };
 
+//choose random word/topic from array. scan word/top and display underlines for each letter
 function setWord() {
     word = wordChoices[Math.floor(Math.random() * wordChoices.length)];
     for (var i = 0; i < word.length; i++) {
-        word.CharAt(i) = '_';
+        if (word.charAt(i) != " ") {
+        wordBoard = wordBoard + "_";
+        }
+        else {
+        wordBoard = wordBoard + " ";
+        }
     }
 }
 
@@ -52,10 +87,14 @@ function setScore() {
     winsText.innerHTML = wins;
     guessesLeftText.innerHTML = guessesLeft;
     guessesText.innerHTML = guesses;
-    wordBoardText.innerHTML = word;
+    wordBoardText.innerHTML = wordBoard;
 }
 
 function showGuesses() {
-    guesses.push(playerGuess);
+    guesses.push(lowerPlayerGuess);
 }
 
+function setCharAt(str, index, chr) {
+    if(index > str.length-1) return str;
+	return str.substr(0,index) + chr + str.substr(index+1);
+}
