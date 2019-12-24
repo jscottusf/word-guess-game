@@ -12,7 +12,8 @@ var guessesLeft = 12;
 var guessesLeftText;
 var winsText;
 var wins = 0;
-var winner;
+var winner = "";
+var winnerText;
 
 
 //assign variables to html
@@ -20,7 +21,7 @@ winsText = document.getElementById("winsText");
 wordBoardText = document.getElementById("wordBoardText");
 guessesLeftText = document.getElementById("guessesLeftText");
 guessesText = document.getElementById("guessesText");
-winner = document.getElementById("winner");
+winnerText = document.getElementById("winnerText");
 setWord();
 setScore();
 console.log(word);
@@ -41,33 +42,37 @@ document.onkeyup = function(event) {
         alert("You have already chosen this letter")
     }
     else {
+        if (word.indexOf(lowerPlayerGuess) === -1) {
+            showGuesses();
+            guessesLeft--;
+        }
+        if (guessesLeft === 0) {
+            alert("better luck next time");
+            wordBoard = "";
+            guessesLeft = 12;
+            guesses = [];
+            setWord();
+            setScore();
+        }
+        
         for (var j = 0; j < word.length; j++) {
             if (word.charAt(j) === lowerPlayerGuess) {
                 wordBoard = setCharAt(wordBoard, j, lowerPlayerGuess);
             }
-            
+            if (wordBoard.indexOf("_") === -1) {
+                wins++;
+                alert("winner!")
+                winner = word;
+                wordBoard = "";
+                guessesLeft = 12;
+                guesses = [];
+                setWord();
+                setScore();
+            }
         }
-        // if (wordChoices.indexOf(lowerPlayerGuess) === -1) {
-        //     guessesLeft--;
-        //     showGuesses();
-        // }
-
-            //     if (word.charAt(j) === lowerPlayerGuess) {
-            //         wordBoard = wordBoard + lowerPlayerGuess;
-            //         }
-            //     else {
-            //         wordBoard = wordBoard + "_ ";
-            //         }
-            // }
-    }
-
-
-
-    //check that key is a lower case letter
     setScore();
-    
         
-    
+    }
 };
 
 //choose random word/topic from array. scan word/top and display underlines for each letter
@@ -88,6 +93,7 @@ function setScore() {
     guessesLeftText.innerHTML = guessesLeft;
     guessesText.innerHTML = guesses;
     wordBoardText.innerHTML = wordBoard;
+    winnerText.innerHTML = winner;
 }
 
 function showGuesses() {
