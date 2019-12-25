@@ -10,15 +10,22 @@
 </head>
 <body>
     <div class ="wrapper">
-        <header class="header">
+        <header>
             <h1>Hangman</h1>
         </header>
         <h2>Press any key to get started!</h2>
-        <p>Wins: <span id="winsText"></span></p>
-        <p>Current word: <span id="wordBoardText"></span></p>
-        <p>Number of guesses remaining: <span id="guessesLeftText"></span></p>
-        <p>Your guesses so far: <span id="guessesText"></span></p>
-        <h1 id="winnerText"></h1>
+        <hr>
+        <div class="grid-container">
+            <div class="grid-item">
+                <h1 id="winnerText"></h1>
+            </div>
+            <div class="grid-item">
+                <p>Wins: <span id="winsText"></span></p>
+                <p>Current word: <span id="wordBoardText"></span></p>
+                <p>Number of guesses remaining: <span id="guessesLeftText"></span></p>
+                <p>Your guesses so far: <span id="guessesText"></span></p>
+            </div>
+        </div>
     </div>
     <script src="./assets/javascript/game.js"></script>
 </body>
