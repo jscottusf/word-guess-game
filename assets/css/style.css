@@ -16,16 +16,21 @@ body {
 header {
     width: 100%;
     background-image: url("../images/usa.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
     text-align: center;
-    padding: 200px 0;
+    padding: 0 0 80px 0;
 }
 
 h1 {
     margin: 0;
     padding: 0;
+    font-size: 150px;
+    font-weight: bolder;
 }
 
-h2 {
+#begin {
     margin-left: 10%;
 }
 
@@ -53,4 +58,23 @@ h2 {
 
 #guessesText {
     letter-spacing: 5px;
+}
+
+ul {
+    text-align: left;
+}
+
+.push {
+    margin: 50px;
+    height: 50px;
+}
+  
+footer {
+    background: #efeee7;
+    height: 30px;
+    padding: 10px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }

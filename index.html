@@ -12,12 +12,16 @@
     <div class ="wrapper">
         <header>
             <h1>Hangman</h1>
+            <h2>US STATE CAPITALS</h2>
         </header>
-        <h2>Press any key to get started...</h2>
+        <h2 id="begin">Press any letter to get started...</h2>
         <div class="grid-container">
             <div class="grid-item">
-                <h3>Previous round:</h3>
-                <h3 id="winnerText"></h3>
+                <ul>Previous round:
+                    <li id="nameText"></li>
+                    <li id="factText"></li>
+                    <li id="winnerText"></li>
+                </ul>
             </div>
             <div class="grid-item">
                 <p>Wins: <span id="winsText"></span></p>
@@ -26,7 +30,9 @@
                 <p>Your guesses so far: <span id="guessesText"></span></p>
             </div>
         </div>
+        <div class="push"></div>
     </div>
+    <footer></footer>
     <script src="./assets/javascript/game.js"></script>
 </body>
 </html>

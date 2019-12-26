@@ -1,5 +1,18 @@
 //delcare variables
 var wordChoices = ["sacramento", "honolulu", "montgomery", "juneau", "phoenix", "little rock", "denver", "hartford", "dover", "tallahassee", "atlanta", "boise", "springfield", "indianapolis", "des moines", "topeka", "frankfort", "baton rouge", "augusta", "annapolis", "boston", "lansing", "saint paul", "jackson", "jefferson city", "helena", "lincoln", "carson city", "concord", "trenton", "santa fe", "albany", "raleigh", "bismark", "columbus", "oklahoma city", "salem", "harrisburg", "providence", "columbia", "pierre", "nashville", "austin", "salt lake city", "montpelier", "richmond", "olympia", "charleston", "madison", "cheyenne"];
+
+// var wordChoices = ["raleigh", "tallahassee"];
+
+// var capitalInfo = {
+//     "raleigh": [state : "Raleigh, North Carolina", 
+//     fact : "North Carolina is the best state", 
+//     picture : "picture?" ],
+//     "tallahassee": [
+//     state : "Tallehassee, Florida",
+//     fact : "no fun facts about Florida exist",
+//     picture : "not sure yet" ]
+// };
+
 var alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var playerGuess;
 var lowerPlayerGuess;
@@ -93,7 +106,7 @@ function setScore() {
     guessesLeftText.innerHTML = guessesLeft;
     guessesText.innerHTML = guesses;
     wordBoardText.innerHTML = wordBoard;
-    winnerText.innerHTML = winner;
+    winnerText.innerHTML = winner
 }
 
 function showGuesses() {
@@ -103,4 +116,8 @@ function showGuesses() {
 function setCharAt(str, index, chr) {
     if(index > str.length-1) return str;
 	return str.substr(0,index) + chr + str.substr(index+1);
+}
+
+function setFacts(){
+
 }
