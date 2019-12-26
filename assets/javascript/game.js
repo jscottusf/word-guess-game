@@ -1,5 +1,5 @@
 //delcare variables
-var wordChoices = ["the cat", "the dog", "the mouse"];
+var wordChoices = ["sacramento", "honolulu", "montgomery", "juneau", "phoenix", "little rock", "denver", "hartford", "dover", "tallahassee", "atlanta", "boise", "springfield", "indianapolis", "des moines", "topeka", "frankfort", "baton rouge", "augusta", "annapolis", "boston", "lansing", "saint paul", "jackson", "jefferson city", "helena", "lincoln", "carson city", "concord", "trenton", "santa fe", "albany", "raleigh", "bismark", "columbus", "oklahoma city", "salem", "harrisburg", "providence", "columbia", "pierre", "nashville", "austin", "salt lake city", "montpelier", "richmond", "olympia", "charleston", "madison", "cheyenne"];
 var alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var playerGuess;
 var lowerPlayerGuess;
@@ -47,7 +47,7 @@ document.onkeyup = function(event) {
             guessesLeft--;
         }
         if (guessesLeft === 0) {
-            alert("better luck next time");
+            alert("Sorry, bro. Try again.");
             wordBoard = "";
             guessesLeft = 12;
             guesses = [];
@@ -61,7 +61,7 @@ document.onkeyup = function(event) {
             }
             if (wordBoard.indexOf("_") === -1) {
                 wins++;
-                alert("winner!")
+                alert(word + " is correct")
                 winner = word;
                 wordBoard = "";
                 guessesLeft = 12;

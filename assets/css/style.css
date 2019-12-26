@@ -5,7 +5,7 @@ html, body {
   }
 
 body {
-    background-color: navy;
+    background-color: rgb(1, 1, 31);
     color: white;
     font-size: 18px;
     font-family: 'Roboto Slab', serif;
@@ -15,10 +15,9 @@ body {
 
 header {
     width: 100%;
-    padding: 20px 0;
-    background-color: oldlace;
-    color: navy;
+    background-image: url("../images/usa.jpg");
     text-align: center;
+    padding: 200px 0;
 }
 
 h1 {
@@ -27,7 +26,7 @@ h1 {
 }
 
 h2 {
-    text-align: center;
+    margin-left: 10%;
 }
 
 /* adding CSS grid */
@@ -38,12 +37,11 @@ h2 {
     width: 1200px;
     grid-gap: 50px 0;
     grid-template-columns: 1fr 1fr;
-    background-color: #2196F3;
     padding: 10px;
 }
   
 .grid-item {
-    border: 1px solid rgba(0, 0, 0, 0.8);
+    border: 1px dashed oldlace;
     padding: 20px;
     font-size: 30px;
     text-align: center;
