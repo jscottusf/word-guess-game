@@ -68,8 +68,8 @@ document.onkeyup = function(event) {
             guessesLeft--;
         }
         if (guessesLeft === 0) {
-            alertMessage("Sorry, bro. Press Enter to try again.")
-            alertText.innerHTML = alert
+            winner = word
+            resetLoss();
         }
         
         for (var j = 0; j < word.length; j++) {
@@ -78,7 +78,7 @@ document.onkeyup = function(event) {
             }
             if (wordBoard.indexOf("_") === -1) {
                 winner = word;
-                alertMessage("Well done, press any key to play again.")
+                alertMessage("Well done, press any letter to play again.")
             }
         }
         setScore();
@@ -129,6 +129,16 @@ function resetGame() {
     wordBoard = "";
     guessesLeft = 12;
     guesses = [];
+    setWord();
+    setScore();
+    setFacts();
+}
+
+function resetLoss() {
+    wordBoard = "";
+    guessesLeft = 12;
+    guesses = [];
+    alertMessage(wordInfo[winner].name + " was the capital you were looking for. Press any letter to play again.");
     setWord();
     setScore();
     setFacts();
