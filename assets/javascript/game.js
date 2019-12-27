@@ -29,6 +29,8 @@ var winner = "";
 var winnerText;
 var nameText;
 var factText;
+var alert = "";
+var alertText;
 
 
 //assign variables to html
@@ -39,6 +41,7 @@ guessesText = document.getElementById("guessesText");
 winnerText = document.getElementById("winnerText");
 nameText = document.getElementById("nameText");
 factText = document.getElementById("factText");
+alertText = document.getElementById("alertText");
 setWord();
 setScore();
 console.log(word);
@@ -53,23 +56,20 @@ document.onkeyup = function(event) {
     winner.innerHTML = " ";
 
     if (alphabet.indexOf(lowerPlayerGuess) === -1) {
-        alert("Please choose a lower case letter from a - z");
+        alertMessage("Please choose a lower case letter from a - z")
     }
-    else if (guesses.indexOf(lowerPlayerGuess) != -1) {
-        alert("You have already chosen this letter")
+    else if ((guesses.indexOf(lowerPlayerGuess) != -1) || (wordBoard.indexOf(lowerPlayerGuess) != -1)) {
+        alertMessage("You have already chosen this letter")
     }
     else {
+        alertMessage("");
         if (word.indexOf(lowerPlayerGuess) === -1) {
             showGuesses();
             guessesLeft--;
         }
         if (guessesLeft === 0) {
-            alert("Sorry, bro. Try again.");
-            wordBoard = "";
-            guessesLeft = 12;
-            guesses = [];
-            setWord();
-            setScore();
+            alertMessage("Sorry, bro. Press Enter to try again.")
+            alertText.innerHTML = alert
         }
         
         for (var j = 0; j < word.length; j++) {
@@ -77,20 +77,16 @@ document.onkeyup = function(event) {
                 wordBoard = setCharAt(wordBoard, j, lowerPlayerGuess);
             }
             if (wordBoard.indexOf("_") === -1) {
-                wins++;
-                alert(word + " is correct")
                 winner = word;
-                wordBoard = "";
-                guessesLeft = 12;
-                guesses = [];
-                setWord();
-                setScore();
-                setFacts();
+                alertMessage("Well done, press any key to play again.")
             }
         }
-    setScore();
-        
+        setScore();
     }
+    if ((wordBoard.indexOf("_") === -1)) {
+        resetGame();
+        setScore();
+}
 };
 
 //choose random word/topic from array. scan word/top and display underlines for each letter
@@ -126,4 +122,19 @@ function setFacts() {
     nameText.innerHTML = wordInfo[winner].name;
     factText.innerHTML = wordInfo[winner].fact;
     document.getElementById("img").src="./assets/images/" + wordInfo[winner].img + ".jpg";
+}
+
+function resetGame() {
+    wins++;
+    wordBoard = "";
+    guessesLeft = 12;
+    guesses = [];
+    setWord();
+    setScore();
+    setFacts();
+}
+
+function alertMessage(message) {
+    alert = message;
+    alertText.innerHTML = alert;
 }
