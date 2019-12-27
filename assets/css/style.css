@@ -17,10 +17,10 @@ header {
     width: 100%;
     background-image: url("../images/usa.jpg");
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 100% 150%;
     position: relative;
     text-align: center;
-    padding: 0 0 80px 0;
+    padding: 0 0 50px 0;
 }
 
 h1 {
@@ -44,8 +44,15 @@ h1 {
     grid-template-columns: 1fr 1fr;
     padding: 10px;
 }
+
+.grid-item-left {
+    border: 1px dashed oldlace;
+    padding: 20px;
+    font-size: 30px;
+    text-align: left;
+}
   
-.grid-item {
+.grid-item-right {
     border: 1px dashed oldlace;
     padding: 20px;
     font-size: 30px;
@@ -60,8 +67,16 @@ h1 {
     letter-spacing: 5px;
 }
 
-ul {
+#img {
+    position: relative;
+    width: 300px;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+p {
     text-align: left;
+    margin: 10px 0; 
 }
 
 .push {

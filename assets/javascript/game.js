@@ -1,17 +1,17 @@
 //delcare variables
-var wordChoices = ["sacramento", "honolulu", "montgomery", "juneau", "phoenix", "little rock", "denver", "hartford", "dover", "tallahassee", "atlanta", "boise", "springfield", "indianapolis", "des moines", "topeka", "frankfort", "baton rouge", "augusta", "annapolis", "boston", "lansing", "saint paul", "jackson", "jefferson city", "helena", "lincoln", "carson city", "concord", "trenton", "santa fe", "albany", "raleigh", "bismark", "columbus", "oklahoma city", "salem", "harrisburg", "providence", "columbia", "pierre", "nashville", "austin", "salt lake city", "montpelier", "richmond", "olympia", "charleston", "madison", "cheyenne"];
+// var wordChoices = ["sacramento", "honolulu", "montgomery", "juneau", "phoenix", "little rock", "denver", "hartford", "dover", "tallahassee", "atlanta", "boise", "springfield", "indianapolis", "des moines", "topeka", "frankfort", "baton rouge", "augusta", "annapolis", "boston", "lansing", "saint paul", "jackson", "jefferson city", "helena", "lincoln", "carson city", "concord", "trenton", "santa fe", "albany", "raleigh", "bismark", "columbus", "oklahoma city", "salem", "harrisburg", "providence", "columbia", "pierre", "nashville", "austin", "salt lake city", "montpelier", "richmond", "olympia", "charleston", "madison", "cheyenne"];
 
-// var wordChoices = ["raleigh", "tallahassee"];
+var wordChoices = ["raleigh", "tallahassee"];
 
-// var capitalInfo = {
-//     "raleigh": [state : "Raleigh, North Carolina", 
-//     fact : "North Carolina is the best state", 
-//     picture : "picture?" ],
-//     "tallahassee": [
-//     state : "Tallehassee, Florida",
-//     fact : "no fun facts about Florida exist",
-//     picture : "not sure yet" ]
-// };
+var wordInfo = {
+    "raleigh" : {name : "Raleigh, North Carolina", 
+    fact : "North Carolina: Mounatins and Ocean. BBQ and Craft Beer. Blue skies and whiskey.", 
+    img : "raleigh" },
+    "tallahassee" : {
+    name : "Tallahassee, Florida",
+    fact : "Florida is a terrible place to live. It's an even worse place to die. Remeber that when you get older",
+    img : "tallahassee"}
+    };
 
 var alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var playerGuess;
@@ -27,6 +27,8 @@ var winsText;
 var wins = 0;
 var winner = "";
 var winnerText;
+var nameText;
+var factText;
 
 
 //assign variables to html
@@ -35,6 +37,8 @@ wordBoardText = document.getElementById("wordBoardText");
 guessesLeftText = document.getElementById("guessesLeftText");
 guessesText = document.getElementById("guessesText");
 winnerText = document.getElementById("winnerText");
+nameText = document.getElementById("nameText");
+factText = document.getElementById("factText");
 setWord();
 setScore();
 console.log(word);
@@ -81,6 +85,7 @@ document.onkeyup = function(event) {
                 guesses = [];
                 setWord();
                 setScore();
+                setFacts();
             }
         }
     setScore();
@@ -106,7 +111,6 @@ function setScore() {
     guessesLeftText.innerHTML = guessesLeft;
     guessesText.innerHTML = guesses;
     wordBoardText.innerHTML = wordBoard;
-    winnerText.innerHTML = winner
 }
 
 function showGuesses() {
@@ -118,6 +122,8 @@ function setCharAt(str, index, chr) {
 	return str.substr(0,index) + chr + str.substr(index+1);
 }
 
-function setFacts(){
-
+function setFacts() {
+    nameText.innerHTML = wordInfo[winner].name;
+    factText.innerHTML = wordInfo[winner].fact;
+    document.getElementById("img").src="./assets/images/" + wordInfo[winner].img + ".jpg";
 }
