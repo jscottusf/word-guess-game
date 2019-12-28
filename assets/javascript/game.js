@@ -245,15 +245,22 @@ document.onkeyup = function(event) {
     console.log(playerGuess);
     console.log(lowerPlayerGuess)
     winner.innerHTML = " ";
+    alertMessage(" ");
 
     if (alphabet.indexOf(lowerPlayerGuess) === -1) {
         alertMessage("Please choose a lower case letter from a - z")
     }
+    else if (guessesLeft === 0) {
+        resetScore();
+    }
+    else if ((wordBoard.indexOf("_") === -1)) {
+        resetGame();
+        setScore();
+    }
     else if ((guesses.indexOf(lowerPlayerGuess) != -1) || (wordBoard.indexOf(lowerPlayerGuess) != -1)) {
         alertMessage("You have already chosen this letter")
-    }
+    }   
     else {
-        alertMessage("");
         if (word.indexOf(lowerPlayerGuess) === -1) {
             showGuesses();
             guessesLeft--;
@@ -263,21 +270,20 @@ document.onkeyup = function(event) {
             resetLoss();
         }
         
+        
         for (var j = 0; j < word.length; j++) {
             if (word.charAt(j) === lowerPlayerGuess) {
                 wordBoard = setCharAt(wordBoard, j, lowerPlayerGuess);
             }
             if (wordBoard.indexOf("_") === -1) {
+                wordBoard = setCharAt(wordBoard, j, lowerPlayerGuess);
                 winner = word;
-                alertMessage("Well done, press any letter to play again.")
+                alertMessage("Well done, press any letter to play again.");
+                break;
             }
         }
         setScore();
     }
-    if ((wordBoard.indexOf("_") === -1)) {
-        resetGame();
-        setScore();
-}
 };
 
 //choose random word/topic from array. scan word/top and display underlines for each letter
@@ -335,7 +341,6 @@ function resetGame() {
 
 function resetLoss() {
     alertMessage(wordInfo[winner].name + " was the capital you were looking for. Press any letter to play again.");
-    resetScore();
 }
 
 function alertMessage(message) {
