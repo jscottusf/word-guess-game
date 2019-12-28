@@ -4,67 +4,67 @@ var wordChoices = ["sacramento", "honolulu", "montgomery", "juneau", "phoenix", 
 var wordInfo = {
     "raleigh" : {
     name : "Raleigh, North Carolina", 
-    fact : "North Carolina: Mounatins and Ocean. BBQ and Craft Beer. Blue skies and whiskey.", 
+    fact : 'Located in the "Research Triangle" of North Carolina, Raleigh is the home of North Carolina State University and is known for great BBQ and craft beer', 
     img : "raleigh" },
     "tallahassee" : {
     name : "Tallahassee, Florida",
-    fact : "Florida is a terrible place to live. It's an even worse place to die. Remeber that when you get older",
+    fact : 'Home to Florida State University, Tallahassee is located in the "Panhandle" region of North Florida. While beaches and Walt Disney World bring in tourists from around the world, Florida owes much of its population growth to the invention and widespead use of Air Conditioning',
     img : "tallahassee"},
     "sacramento" : {
     name : "Sacremento, California", 
-    fact : "fact", 
+    fact : "California is the largest state by population in the United States. If California were it's own country, it would have the sixth largest GDP in the world.", 
     img : "ca" },
     "honolulu" : {
     name : "Honolulu, Hawaii",
-    fact : "fact",
+    fact : "Hawaii's capital of Honolulu sits on the island of Oahu, which is Hawaii's most populated island. Hawaii is the birthplace of US President Barack Obama.",
     img : "hi"},
     "montgomery" : {
     name : "Montgomery, Alabama", 
-    fact : "fact", 
+    fact : "The world's first Electric Trolley System was introduced in Montgomery in 1886. Alabama workers built the first rocket to put humans on the moon and Alabama is the only state with all major natural resources needed to make iron and steel.", 
     img : "al" },
     "juneau" : {
     name : "Juneau, Alaska",
-    fact : "fact",
+    fact : "Located in a mountainous region of southern Alaska and surrounded by glaciers, Alaska's capital city Juneau is only accessible by air or by sea. Alaska's most important revenue source is the oil and natural gas industry. Alaska accounts for 25% of the oil produced in the United States.",
     img : "ak"},
     "phoenix" : {
     name : "Phoenix, Arizon",
-    fact : "fact",
+    fact : "Phoenix is the United States’ fifth-largest city with a population of over 1.6 million. According to data compiled by the National Climatic Data Center, Phoenix basks in sunshine more often than any other major metropolitan area in the U.S. The sun shines on Phoenix during 85 percent of its daylight hours.",
     img : "az"},
     "little rock" : {
     name : "Little Rock, Arkansas",
-    fact : "fact",
+    fact : "Ater the 1954 Brown vs. Board of Education ruling deemed segregation in schools unconstitutional, a group of black students known today as The Little Rock Nine made history as they were escorted into Little Rock Central High School by the Arkansas National Guard per President Dwight D. Eisenhower's order.",
     img : "ar"},
     "denver" : {
     name : "Denver, Colorado",
-    fact : "fact",
+    fact : 'Known as the “Mile High City," the Denver city nickname is derived from the fact that it sits at an elevation 5,280 feet just east of the Rocky Mountains. The fact that Colorado has also legalized recreational marajuana usage is just a coincidence.',
     img : "co"},
     "hartford" : {
     name : "Hartford, Connecticut",
-    fact : "fact",
+    fact : 'Hartford resident Mark Twain once said: “Of all the beautiful towns it has been my fortune to see, this is the chief … You do not know what beauty is if you have not been here.” Today, Hartford is know as the "Insurance capital of the wolrd."',
     img : "ct"},
     "dover" : {
     name : "Dover, Deleware",
-    fact : "fact",
+    fact : "Deleware became the first state to ratify the US Constitution in Dover on December 7, 1787",
     img : "de"},
     "atlanta" : {
-    name : "Atlanta, GA",
-    fact : "fact",
+    name : "Atlanta, Georgia",
+    fact : "Atlanta is the headquarters of Coca-Cola and several other Fortune 500 companies. Georgia is known as the Peach State,but it's also the country's top producer of pecans, peanuts, and vidalia onions.",
     img : "ga"},
     "boise" : {
     name : "Boise, Idaho",
-    fact : "fact",
+    fact : "Boise is nicknamed The City of Trees. In Boise it's technically illegal to ride a merry-go-round on Sunday.",
     img : "id"},
     "springfield" : {
     name : "Springfield, Illinois",
-    fact : "fact",
+    fact : "President Abraham Lincoln lived in Springfield from 1837 until 1861 when he moved to the White House. Let's face it though, when you think of Illinois, you probably think of Chicago. Da Bears.",
     img : "il"},
     "indianapolis" : {
     name : "Indianapolis, Indiana",
-    fact : "fact",
+    fact : "Home to the Indy 500 and the Colts, the city of Indianapolis is the largest major US city not located on a navigable river.",
     img : "in"},
     "des moines" : {
     name : "Des Moines, Iowa",
-    fact : "fact",
+    fact : 'Every four years, aspiring presidential candidates spend months campaigning in Iowa hoping to win the "first in the nation" Iowa Caucus. Sliced bread was invented by an Iowan from Davenport.',
     img : "ia"},
     "topeka" : {
     name : "Topeka, Kansas",
