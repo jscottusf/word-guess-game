@@ -68,91 +68,91 @@ var wordInfo = {
     img : "ia"},
     "topeka" : {
     name : "Topeka, Kansas",
-    fact : "fact",
+    fact : 'The name Topeka originates from a term meaning "a good place to dig potatoes." Kansas is the birthplace of Pizza Hut and home to both the longest grain elevator and the longest railroad bridge',
     img : "ks"},
     "frankfort" : {
     name : "Frankford, Kentucky",
-    fact : "fact",
+    fact : "During the Civil War, Frankfort was the only Union capital occupied by Confederate troops. Kentucky today is most famous for bluegrass music and bourbon",
     img : "ky"},
     "baton rouge" : {
     name : "Baton Rouge, Louisiana",
-    fact : "fact",
+    fact : "Home to Louisiana State University, Baton Rouge is located along the Mississippi river. The state of Louisiana has a strong Cajun/French influence giving it a unique culture within the American south.",
     img : "la"},
     "augusta" : {
     name : "Augusta, Maine",
-    fact : "fact",
+    fact : "Established in 1736 and named after Princess Augusta from Whales, Augusta, Maine is the easternmost US state capital. Maine is famous for producing 90% of the US lobster supply and for the invention of the donut hole.",
     img : "me"},
     "annapolis" : {
     name : "Annapolis, Maryland",
-    fact : "fact",
+    fact : "Annapolis became the nations capital after the revolutionary war and was the location for the first continental congressß to attempt to reform the articles of confederation.",
     img : "md"},
     "boston" : {
     name : "Boston, Massachusetts",
-    fact : "fact",
+    fact : "Home of the Red Sox, Boston is famous for Fenway park and it's baked beans. The state of Massachusetts is known for being the landing place of the Mayflower and the Pilgrims.",
     img : "ma"},
     "lansing" : {
     name : "Lansing, Michigan",
-    fact : "fact",
+    fact : "Located in central Michigian in between Detroit and Grand Rapids, Lansing is home to Michigan State University.",
     img : "mi"},
     "saint paul" : {
     name : "Saint Paul, Minnesota",
-    fact : "fact",
+    fact : "Along with it's twin city Minneapolis, St. Paul makes up part of the third largest metro area in the midwest (after Chicago and Detroit). The region is home to the Minnesota Vikings and Twins, and Saint Paul has more city shoreline on the Mississippi River than any other city.",
     img : "mn"},
     "jackson" : {
-    name : "Jackson, Mississippi",
+    name : "Nicknamed the Crossroads of the South and named after US president Andrew Jackson, Jackson is the most populated city in the state of Mississippi.",
     fact : "fact",
     img : "ms"},
     "jefferson city" : {
     name : "Jefferson City, Missouri",
-    fact : "fact",
+    fact : "Missouri's capital is named after US president Thomas Jefferson. Jefferson City is located in a region refered to as the Missouri Rhinland due it's history of German immigrants establishing vineyards.",
     img : "mo"},
     "helena" : {
     name : "Helena, Montana",
-    fact : "fact",
+    fact : "Nicknamed Queen City of the Rockies, Helena is the state capital for Montana and is America's 5th-least populated state capital city. Four miners originally founded Helena as a gold camp which eventually turned the city into a boomtown.",
     img : "mt"},
     "lincoln" : {
     name : "Lincoln, Nebraska",
-    fact : "fact",
+    fact : "Home of Warren Buffet. Nebraska is known as the bithplace of Kool-Aid and home to the largest indoor rainforest.",
     img : "ne"},
     "carson city": {
     name : "Carson City, Nevada",
-    fact : "fact",
+    fact : "Carson City is known for it authentic wild west history. It is also located near the historic mining ghost town of Virginia City, and near Lake Tahoe and several major ski areas. Casino gambling is legal in Carson City, but honestly, when you think of Nevada you probably think of Las Vegas.",
     img : "nv"},
     "concord" : {
     name : "Concord, New Hampshire",
-    fact : "fact",
+    fact : 'In the 19th century, the city was well known for carriage making, and the "Concord coaches" became world famous. New Hampshire was the first to declare its independence from Mother England -- a full six months before the Declaration of Independence was signed...hence the state motto, "live free or die."',
     img : "nh"},
     "trenton" : {
     name : "Trenton, New Jersey",
-    fact : "fact",
+    fact : "Known as the site of George Washington's first victory over the Redcoats in the War of Independence. New Jersey is the most densely populated state in the US",
     img : "nj"},
     "santa fe" : {
     name : "Santa Fe, New Mexico",
-    fact : "fact",
+    fact : "At 7,000 above sea level, Santa Fe is the United State's highest capital city and also the oldest (founded in 1608)",
     img : "nm"},
     "albany" : {
     name : "Albany, New York",
-    fact : "fact",
+    fact : "Albany is the state's Capitol so it's known for politics in New York. But New York is more famous for New York City, which is the largest city in the United States. There is one birth in NYC every 4.4 minutes.",
     img : "ny"},
     "bismark" : {
     name : "Bismark, North Dakota",
-    fact : "fact",
+    fact : "Bismarck is also known as a site on the Lewis and Clark National Historic Trail and as the home of the Dakota Zoo. 90% of North Dakota's land area is used as farms or ranches.",
     img : "nd"},
     "columbus" : {
     name : "Columbus, Ohio",
-    fact : "fact",
+    fact : "Home of Ohio State University, Columbus is the most populated city in the state of Ohio. Cleveland is also pretty cool and you should check out their hastily made tourism video.",
     img : "oh"},
     "oklahoma city" : {
     name : "Oklahoma City (OKC), Oklahoma",
-    fact : "fact",
+    fact : "Oklahoma City is the largest city in the State of Oklahoma, with a metro population of more than 1.3 million. The world's first installed parking meter was in Oklahoma City, on July 16, 1935.",
     img : "ok"},
     "salem" : {
     name : "Salem, Oregon",
-    fact : "fact",
+    fact : "Named after Salem, Massachusetts...Salem, Oregon is located in between Portland and Oregon in the Willamette Valley. If you ever happen to visit Oregon, be sure to try some VooDoo dunuts in Portland.",
     img : "or"},
     "harrisburg" : {
     name : "Harrisburg, Pennslyvania",
-    fact : "fact",
+    fact : "Although Harrisburg is the capital of Pennslyvania, the nearby city of Hershey is considered the Chocolate Capital of the United States.",
     img : "pa"},
     "providence" : {
     name : "Providence, Rhode Island",
