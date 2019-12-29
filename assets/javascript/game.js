@@ -290,6 +290,8 @@ function setWord() {
     }
 }
 
+//scab through word to see if player guess matches, place player letter guess in appropriate spot if true
+//print well done message once all letters have been filled
 function setWordBoard() {
     for (var j = 0; j < word.length; j++) {
         if (word.charAt(j) === lowerPlayerGuess) {
