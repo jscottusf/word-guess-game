@@ -1,6 +1,5 @@
 //delcare variables
 var wordChoices = ["sacramento", "honolulu", "montgomery", "juneau", "phoenix", "little rock", "denver", "hartford", "dover", "tallahassee", "atlanta", "boise", "springfield", "indianapolis", "des moines", "topeka", "frankfort", "baton rouge", "augusta", "annapolis", "boston", "lansing", "saint paul", "jackson", "jefferson city", "helena", "lincoln", "carson city", "concord", "trenton", "santa fe", "albany", "raleigh", "bismark", "columbus", "oklahoma city", "salem", "harrisburg", "providence", "columbia", "pierre", "nashville", "austin", "salt lake city", "montpelier", "richmond", "olympia", "charleston", "madison", "cheyenne"];
-
 var wordInfo = {
     "raleigh" : {
     name : "Raleigh, North Carolina", 
@@ -247,15 +246,15 @@ document.onkeyup = function(event) {
     winner.innerHTML = " ";
     alertMessage(" ");
 
-    if (alphabet.indexOf(lowerPlayerGuess) === -1) {
-        alertMessage("Please choose a lower case letter from a - z")
-    }
-    else if (guessesLeft === 0) {
+    if (guessesLeft === 0) {
         resetScore();
     }
     else if ((wordBoard.indexOf("_") === -1)) {
         resetGame();
         setScore();
+    }
+    else if (alphabet.indexOf(lowerPlayerGuess) === -1) {
+        alertMessage("Please choose a lower case letter from a - z")
     }
     else if ((guesses.indexOf(lowerPlayerGuess) != -1) || (wordBoard.indexOf(lowerPlayerGuess) != -1)) {
         alertMessage("You have already chosen this letter")
@@ -269,19 +268,7 @@ document.onkeyup = function(event) {
             winner = word
             resetLoss();
         }
-        
-        
-        for (var j = 0; j < word.length; j++) {
-            if (word.charAt(j) === lowerPlayerGuess) {
-                wordBoard = setCharAt(wordBoard, j, lowerPlayerGuess);
-            }
-            if (wordBoard.indexOf("_") === -1) {
-                wordBoard = setCharAt(wordBoard, j, lowerPlayerGuess);
-                winner = word;
-                alertMessage("Well done, press any letter to play again.");
-                break;
-            }
-        }
+        setWordBoard();
         setScore();
     }
 };
@@ -299,6 +286,20 @@ function setWord() {
         }
         else {
         wordBoard = wordBoard + " ";
+        }
+    }
+}
+
+function setWordBoard() {
+    for (var j = 0; j < word.length; j++) {
+        if (word.charAt(j) === lowerPlayerGuess) {
+            wordBoard = setCharAt(wordBoard, j, lowerPlayerGuess);
+        }
+        if (wordBoard.indexOf("_") === -1) {
+            wordBoard = setCharAt(wordBoard, j, lowerPlayerGuess);
+            winner = word;
+            alertMessage("Well done, press any letter to play again.");
+            break;
         }
     }
 }
