@@ -91,15 +91,15 @@ var wordInfo = {
     img : "ma"},
     "lansing" : {
     name : "Lansing, Michigan",
-    fact : "Located in central Michigian in between Detroit and Grand Rapids, Lansing is home to Michigan State University.",
+    fact : "Oh, Michigan. The land shaped like a mitten. Located in central Michigian in between Detroit and Grand Rapids, Lansing is home to Michigan State University.",
     img : "mi"},
     "saint paul" : {
     name : "Saint Paul, Minnesota",
     fact : "Along with it's twin city Minneapolis, St. Paul makes up part of the third largest metro area in the midwest (after Chicago and Detroit). The region is home to the Minnesota Vikings and Twins, and Saint Paul has more city shoreline on the Mississippi River than any other city.",
     img : "mn"},
     "jackson" : {
-    name : "Nicknamed the Crossroads of the South and named after US president Andrew Jackson, Jackson is the most populated city in the state of Mississippi.",
-    fact : "fact",
+    name : "Jackson, Mississippi",
+    fact : "Nicknamed the Crossroads of the South and named after US president Andrew Jackson, Jackson is the most populated city in the state of Mississippi.",
     img : "ms"},
     "jefferson city" : {
     name : "Jefferson City, Missouri",
