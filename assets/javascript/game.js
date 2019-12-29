@@ -144,11 +144,11 @@ var wordInfo = {
     img : "oh"},
     "oklahoma city" : {
     name : "Oklahoma City (OKC), Oklahoma",
-    fact : "Oklahoma City is the largest city in the State of Oklahoma, with a metro population of more than 1.3 million. The world's first installed parking meter was in Oklahoma City, on July 16, 1935.",
+    fact : "Oklahoma is the only US state with a functioning oil well on the capital grounds.",
     img : "ok"},
     "salem" : {
     name : "Salem, Oregon",
-    fact : "Named after Salem, Massachusetts...Salem, Oregon is located in between Portland and Oregon in the Willamette Valley. If you ever happen to visit Oregon, be sure to try some VooDoo dunuts in Portland.",
+    fact : "Salem, Oregon is located between Portland and Oregon in the Willamette Valley. If you ever happen to visit Oregon, be sure to try some VooDoo dunuts in Portland.",
     img : "or"},
     "harrisburg" : {
     name : "Harrisburg, Pennslyvania",
@@ -156,51 +156,51 @@ var wordInfo = {
     img : "pa"},
     "providence" : {
     name : "Providence, Rhode Island",
-    fact : "fact",
+    fact : "At 1212 squre miles, Rhode Island is the smallest state by land mass in the USA",
     img : "ri"},
     "columbia" : {
     name : "Columbia, South Carolina",
-    fact : "fact",
+    fact : "Home to the University of South Carolina, Columbia is the largest city in the state. South Carolina is known as T646he Palmetto State.",
     img : "sc"},
     "pierre" : {
     name : "Pierre, South Dakota",
-    fact : "fact",
+    fact : "According to the 2010 census, Pierre, South Dakota has a population of 12,646 people, making it the second-least populous state capital in the United States",
     img : "sd"},
     "nashville" : {
     name : "Nashville, Tennessee",
-    fact : "fact",
+    fact : "In addition to being the capital of Tennessee, Nashville is also known as the capital of country music. Elvis Presley record more than 200 songs at Nashville's history RCA Studio B.",
     img : "tn"},
     "austin" : {
     name : "Austin, Texas",
-    fact : "fact",
+    fact : "Known as the live music capital of the world, Austin has been one of the fastest growing cities in Texas over the past ten years. And that says alot considering that Texas has been one of the fastest grow states in the US over the same period.",
     img : "tx"},
     "salt lake city" : {
     name : "Salt Lake City, Utah",
-    fact : "fact",
+    fact : "Salt Lake City holds the title for the highest JELL-O consumption per capita, in the world. Jello is the Official State Snack of Utah.",
     img : "ut"},
     "montpelier" : {
     name : "Montpelier, Vermont",
-    fact : "fact",
+    fact : "Less than 8,000 people live in Montelier, Vermont making it the least populous state capital in the United States. Montpelier is also the only state capital without a McDonalds. Bummer.",
     img : "vt"},
     "richmond" : {
     name : "Richmond, Virginia",
-    fact : "fact",
+    fact : "Although Richmond was the capital of the Confederacy, it was not the first. Montgomery, Alabama held that title, but the heat and humidity was too much for the Confederates so they relocated the capital to Richmond despite it's close proximity to Washington DC.",
     img : "va"},
     "olympia" : {
     name : "Olympia, Washington",
-    fact : "fact",
+    fact : "Located about sixty miles from Seattle, Olympia is a popular for travelers on their way to the ocean. Washington is one of the few states in the US without a state income tax.",
     img : "wa"},
     "charleston" : {
     name : "Charleston, West Virgina",
-    fact : "fact",
+    fact : "Charleston is the most populated city in West Virgina. West Virgina only exists as a state because when Virgina seceded during the civil war, West Viginia separated to form it's own state to remain with the union. Due to it's mountainous terrain, WV was far less dependant on slavery compared to the rest of Virginia.",
     img : "wv"},
     "madison" : {
     name : "Madison, Wisconsin",
-    fact : "fact",
+    fact : "Madison is home to the University of Wisconsin. Wisconsin is also known as America's Dairyland, hence the reason why Green Bay Packers fans wear cheese head hats.",
     img : "wi"},
     "cheyenne" : {
     name : "Cheyenne, Wyoming",
-    fact : "fact",
+    fact : "Cheyenne, known as the Frontier City, is home to the worlds largest outdoor rodeo.",
     img : "wy"}
     };
 
