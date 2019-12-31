@@ -159,7 +159,7 @@ var wordInfo = {
     img : "ri"},
     "columbia" : {
     name : "Columbia, South Carolina",
-    fact : "Home to the University of South Carolina, Columbia is the largest city in the state. South Carolina is known as T646he Palmetto State.",
+    fact : "Home to the University of South Carolina, Columbia is the largest city in the state. South Carolina is known as The Palmetto State.",
     img : "sc"},
     "pierre" : {
     name : "Pierre, South Dakota",
