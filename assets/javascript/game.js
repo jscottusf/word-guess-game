@@ -1,5 +1,5 @@
 //delcare variables
-var wordChoices = ["sacramento", "honolulu", "montgomery", "juneau", "phoenix", "little rock", "denver", "hartford", "dover", "tallahassee", "atlanta", "boise", "springfield", "indianapolis", "des moines", "topeka", "frankfort", "baton rouge", "augusta", "annapolis", "boston", "lansing", "saint paul", "jackson", "jefferson city", "helena", "lincoln", "carson city", "concord", "trenton", "santa fe", "albany", "raleigh", "bismark", "columbus", "oklahoma city", "salem", "harrisburg", "providence", "columbia", "pierre", "nashville", "austin", "salt lake city", "montpelier", "richmond", "olympia", "charleston", "madison", "cheyenne"];
+var wordChoices = ["sacramento", "honolulu", "montgomery", "juneau", "phoenix", "little rock", "denver", "hartford", "dover", "tallahassee", "atlanta", "boise", "springfield", "indianapolis", "des moines", "topeka", "frankfort", "baton rouge", "augusta", "annapolis", "boston", "lansing", "saint paul", "jackson", "jefferson city", "helena", "lincoln", "carson city", "concord", "trenton", "santa fe", "albany", "raleigh", "bismarck", "columbus", "oklahoma city", "salem", "harrisburg", "providence", "columbia", "pierre", "nashville", "austin", "salt lake city", "montpelier", "richmond", "olympia", "charleston", "madison", "cheyenne"];
 var wordInfo = {
     "raleigh" : {
     name : "Raleigh, North Carolina", 
@@ -133,9 +133,9 @@ var wordInfo = {
     name : "Albany, New York",
     fact : "Albany is the state's Capitol so it's known for politics in New York. But New York is more famous for New York City, which is the largest city in the United States. There is one birth in NYC every 4.4 minutes.",
     img : "ny"},
-    "bismark" : {
-    name : "Bismark, North Dakota",
-    fact : "Bismarck is also known as a site on the Lewis and Clark National Historic Trail and as the home of the Dakota Zoo. 90% of North Dakota's land area is used as farms or ranches.",
+    "bismarck" : {
+    name : "Bismarck, North Dakota",
+    fact : "Bismarck is a site on the Lewis and Clark National Historic Trail and as the home of the Dakota Zoo. 90% of North Dakota's land area is used as farms or ranches.",
     img : "nd"},
     "columbus" : {
     name : "Columbus, Ohio",
@@ -274,6 +274,7 @@ document.onkeyup = function(event) {
 };
 
 //choose random word/topic from array. scan word/top and display underlines for each letter
+//splice used words from the array so they are not repeated during user session
 function setWord() {
     word = wordChoices[Math.floor(Math.random() * wordChoices.length)];
     var index = wordChoices.indexOf(word);
