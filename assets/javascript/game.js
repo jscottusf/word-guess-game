@@ -221,6 +221,9 @@ var nameText;
 var factText;
 var alert = "";
 var alertText;
+var clickSound;
+var winnerSound;
+var loserSound;
 
 
 //assign variables to html
@@ -262,10 +265,12 @@ document.onkeyup = function(event) {
     else {
         if (word.indexOf(lowerPlayerGuess) === -1) {
             showGuesses();
+            clickSound.play();
             guessesLeft--;
         }
         if (guessesLeft === 0) {
             winner = word
+            loserSound.play();
             resetLoss();
         }
         setWordBoard();
@@ -297,9 +302,11 @@ function setWordBoard() {
     for (var j = 0; j < word.length; j++) {
         if (word.charAt(j) === lowerPlayerGuess) {
             wordBoard = setCharAt(wordBoard, j, lowerPlayerGuess);
+            clickSound.play();
         }
         if (wordBoard.indexOf("_") === -1) {
             wordBoard = setCharAt(wordBoard, j, lowerPlayerGuess);
+            winnerSound.play();
             winner = word;
             alertMessage("Well done, press any letter to play again.");
             break;
@@ -312,6 +319,9 @@ function setScore() {
     guessesLeftText.innerHTML = guessesLeft;
     guessesText.innerHTML = guesses;
     wordBoardText.innerHTML = wordBoard;
+    clickSound = new sound("./assets/sounds/click.wav");
+    winnerSound = new sound("./assets/sounds/winner.wav");
+    loserSound = new sound("./assets/sounds/wrong.wav");
 }
 
 function showGuesses() {
@@ -320,7 +330,7 @@ function showGuesses() {
 
 function setCharAt(str, index, chr) {
     if(index > str.length-1) return str;
-	return str.substr(0,index) + chr + str.substr(index+1);
+    return str.substr(0,index) + chr + str.substr(index+1);
 }
 
 function setFacts() {
@@ -350,4 +360,19 @@ function resetLoss() {
 function alertMessage(message) {
     alert = message;
     alertText.innerHTML = alert;
+}
+
+function sound(src) {
+    this.sound = document.createElement("audio");
+    this.sound.src = src;
+    this.sound.setAttribute("preload", "auto");
+    this.sound.setAttribute("controls", "none");
+    this.sound.style.display = "none";
+    document.body.appendChild(this.sound);
+    this.play = function(){
+        this.sound.play();
+    }
+    this.stop = function(){
+        this.sound.pause();
+    }    
 }
