@@ -91,7 +91,7 @@ var wordInfo = {
     img : "ma"},
     "lansing" : {
     name : "Lansing, Michigan",
-    fact : "Oh, Michigan. The land shaped like a mitten. Located in central Michigian in between Detroit and Grand Rapids, Lansing is home to Michigan State University.",
+    fact : "Oh, Michigan...the land shaped like a mitten. Located in central Michigian between Detroit and Grand Rapids, Lansing is home to Michigan State University.",
     img : "mi"},
     "saint paul" : {
     name : "Saint Paul, Minnesota",
@@ -147,7 +147,7 @@ var wordInfo = {
     img : "ok"},
     "salem" : {
     name : "Salem, Oregon",
-    fact : "Salem, Oregon is located between Portland and Oregon in the Willamette Valley. If you ever happen to visit Oregon, be sure to try some VooDoo dunuts in Portland.",
+    fact : "Salem, Oregon is located between Portland and Eugene in the Willamette Valley. If you ever happen to visit Oregon, be sure to try some VooDoo dunuts in Portland.",
     img : "or"},
     "harrisburg" : {
     name : "Harrisburg, Pennslyvania",
@@ -202,7 +202,6 @@ var wordInfo = {
     fact : "Cheyenne, known as the Frontier City, is home to the worlds largest outdoor rodeo.",
     img : "wy"}
     };
-
 var alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var playerGuess;
 var lowerPlayerGuess;
@@ -211,7 +210,7 @@ var wordBoardText;
 var guessesLeft;
 var guesses = [];
 var guessesText;
-var guessesLeft = 12;
+var guessesLeft = 10;
 var guessesLeftText;
 var winsText;
 var wins = 0;
@@ -225,7 +224,6 @@ var clickSound;
 var winnerSound;
 var loserSound;
 
-
 //assign variables to html
 winsText = document.getElementById("winsText");
 wordBoardText = document.getElementById("wordBoardText");
@@ -237,15 +235,12 @@ factText = document.getElementById("factText");
 alertText = document.getElementById("alertText");
 setWord();
 setScore();
-console.log(word);
 
 //main game loop
 document.onkeyup = function(event) {
     playerGuess = event.key;
     //convert to lower just to avoid any game glitches / hassel to player
     lowerPlayerGuess = playerGuess.toLowerCase();
-    console.log(playerGuess);
-    console.log(lowerPlayerGuess)
     winner.innerHTML = " ";
     alertMessage(" ");
 
@@ -296,7 +291,7 @@ function setWord() {
     }
 }
 
-//scab through word to see if player guess matches, place player letter guess in appropriate spot if true
+//scan through word to see if player guess matches, place player letter guess in appropriate spot if true
 //print well done message once all letters have been filled
 function setWordBoard() {
     for (var j = 0; j < word.length; j++) {
@@ -314,6 +309,7 @@ function setWordBoard() {
     }
 }
 
+//link variables to html
 function setScore() {
     winsText.innerHTML = wins;
     guessesLeftText.innerHTML = guessesLeft;
@@ -324,44 +320,53 @@ function setScore() {
     loserSound = new sound("./assets/sounds/wrong.wav");
 }
 
+//add player guesses to an array
 function showGuesses() {
     guesses.push(lowerPlayerGuess);
 }
 
+//assign player guess character to matching index on string
 function setCharAt(str, index, chr) {
     if(index > str.length-1) return str;
     return str.substr(0,index) + chr + str.substr(index+1);
 }
 
+//display info about previous rounds capitals by pulling infor from object list
 function setFacts() {
     nameText.innerHTML = wordInfo[winner].name;
     factText.innerHTML = wordInfo[winner].fact;
     document.getElementById("img").src="./assets/images/" + wordInfo[winner].img + ".jpg";
 }
 
+//resets wordboard, clears guesses and resets guesses left to 12, sets a new random word, shows new score, and calls in fact function.
 function resetScore() {
     wordBoard = "";
-    guessesLeft = 12;
+    guessesLeft = 10;
     guesses = [];
     setWord();
     setScore();
     setFacts();
 }
 
+//reset game after player win
 function resetGame() {
     wins++;
     resetScore();
 }
 
+//reset game after player fails to correctly identify state capital
 function resetLoss() {
     alertMessage(wordInfo[winner].name + " was the capital you were looking for. Press any letter to play again.");
 }
 
+//show alert message on screen
 function alertMessage(message) {
     alert = message;
     alertText.innerHTML = alert;
 }
 
+
+//this code makes the sounds work...found it on W3schools
 function sound(src) {
     this.sound = document.createElement("audio");
     this.sound.src = src;
