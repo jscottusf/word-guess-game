@@ -244,32 +244,39 @@ document.onkeyup = function(event) {
     winner.innerHTML = " ";
     alertMessage(" ");
 
-    if (guessesLeft === 0) {
-        resetScore();
-    }
-    else if ((wordBoard.indexOf("_") === -1)) {
-        resetGame();
+    if (wordBoard.length === 0) {
         setScore();
+        setFacts();
+        alertMessage("You got " + wins + " out of 50 correct. Refresh browser to try again.")
     }
-    else if (alphabet.indexOf(lowerPlayerGuess) === -1) {
-        alertMessage("Please choose a lower case letter from a - z")
-    }
-    else if ((guesses.indexOf(lowerPlayerGuess) != -1) || (wordBoard.indexOf(lowerPlayerGuess) != -1)) {
-        alertMessage("You have already chosen this letter")
-    }   
     else {
-        if (word.indexOf(lowerPlayerGuess) === -1) {
-            showGuesses();
-            clickSound.play();
-            guessesLeft--;
-        }
         if (guessesLeft === 0) {
-            winner = word
-            loserSound.play();
-            resetLoss();
+            resetScore();
         }
-        setWordBoard();
-        setScore();
+        else if ((wordBoard.indexOf("_") === -1)) {
+            resetGame();
+            setScore();
+        }
+        else if (alphabet.indexOf(lowerPlayerGuess) === -1) {
+            alertMessage("Please choose a lower case letter from a - z")
+        }
+        else if ((guesses.indexOf(lowerPlayerGuess) != -1) || (wordBoard.indexOf(lowerPlayerGuess) != -1)) {
+            alertMessage("You have already chosen this letter")
+        }   
+        else {
+            if (word.indexOf(lowerPlayerGuess) === -1) {
+                showGuesses();
+                clickSound.play();
+                guessesLeft--;
+            }
+            if (guessesLeft === 0) {
+                winner = word
+                loserSound.play();
+                resetLoss();
+            }
+            setWordBoard();
+            setScore();
+        }
     }
 };
 
@@ -317,7 +324,7 @@ function setScore() {
     wordBoardText.innerHTML = wordBoard;
     clickSound = new sound("./assets/sounds/click.wav");
     winnerSound = new sound("./assets/sounds/winner.wav");
-    loserSound = new sound("./assets/sounds/wrong.wav");
+    loserSound = new sound("./assets/sounds/wrong.wav");  
 }
 
 //add player guesses to an array
