@@ -70,7 +70,7 @@ var wordInfo = {
     fact : 'The name Topeka originates from a term meaning "a good place to dig potatoes." Kansas is the birthplace of Pizza Hut and home to both the longest grain elevator and the longest railroad bridge',
     img : "ks"},
     "frankfort" : {
-    name : "Frankford, Kentucky",
+    name : "Frankfort, Kentucky",
     fact : "During the Civil War, Frankfort was the only Union capital occupied by Confederate troops. Kentucky today is most famous for bluegrass music and bourbon",
     img : "ky"},
     "baton rouge" : {
@@ -371,7 +371,6 @@ function alertMessage(message) {
     alert = message;
     alertText.innerHTML = alert;
 }
-
 
 //this code makes the sounds work...found it on W3schools
 function sound(src) {
