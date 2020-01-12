@@ -1,3 +1,13 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    margin-bottom: 60px; /* Margin bottom by footer height */
+}
+
 html, body {
     margin: 0;
     padding: 0;
@@ -39,7 +49,7 @@ header {
     display: grid;
     position: relative;
     margin: 0 auto;
-    width: 960px;
+    width: 80%;
     grid-gap: 50px 0;
     grid-template-columns: 1fr 1fr;
     padding: 10px;
@@ -51,12 +61,12 @@ header {
     font-size: 30px;
     text-align: left;
 }
-  
+
 .grid-item-right {
     border: 1px dashed oldlace;
     padding: 20px;
     font-size: 30px;
-    text-align: center;
+    text-align: left;
 }
 
 #wordBoardText {
@@ -75,15 +85,25 @@ header {
 }
 
 p {
-    margin: 10px 0 10px 0; 
+    margin: 10px 0 10px 0;
 }
 
 .push {
     margin: 50px;
-    height: 0px;
+    height: 50px;
 }
-  
-footer {
+
+.footer {
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    height: 60px; /* Set the fixed height of the footer here */
+    line-height: 60px; /* Vertically center the text there */
+    background-color: white;
+}
+
+/* footer {
     background: white;
     height: 30px;
     padding: 10px;
@@ -91,4 +111,8 @@ footer {
     bottom: 0;
     left: 0;
     right: 0;
-}
+} */
+
+/* a {
+    text-align: center;
+} */
