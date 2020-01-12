@@ -1,36 +1,36 @@
 html, body {
-    height: 100%;
     margin: 0;
     padding: 0;
-  }
-
-body {
     background-color: rgb(1, 1, 31);
     color: white;
     font-size: 18px;
     font-family: 'Roboto Slab', serif;
-    margin: 0;
-    padding: 0;
 }
-
+.wrapper {
+    margin: 0 auto;
+    position: absolute;
+    min-width: 100%;
+}
 header {
     width: 100%;
     background-image: url("../images/usa.jpg");
-    background-repeat: no-repeat;
     background-size: 100% 150%;
+    background-repeat: no-repeat;
     position: relative;
     text-align: center;
-    padding: 0 0 50px 0;
+    padding: 0 0 60px 0;
+    line-height: 1.5;
 }
 
-h1 {
+#hang {
     margin: 0;
-    padding: 0;
-    font-size: 150px;
+    padding: 20px 0 0 20px;
+    font-size: 80px;
     font-weight: bolder;
 }
 
 #begin {
+    margin: 10px;
     margin-left: 10%;
 }
 
@@ -39,7 +39,7 @@ h1 {
     display: grid;
     position: relative;
     margin: 0 auto;
-    width: 1200px;
+    width: 960px;
     grid-gap: 50px 0;
     grid-template-columns: 1fr 1fr;
     padding: 10px;
@@ -75,16 +75,16 @@ h1 {
 }
 
 p {
-    margin: 10px 0; 
+    margin: 10px 0 10px 0; 
 }
 
 .push {
     margin: 50px;
-    height: 50px;
+    height: 0px;
 }
   
 footer {
-    background: #efeee7;
+    background: white;
     height: 30px;
     padding: 10px;
     width: 100%;
